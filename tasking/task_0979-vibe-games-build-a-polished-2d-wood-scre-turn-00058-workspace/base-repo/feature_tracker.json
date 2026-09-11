@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Design system & screens scaffold",
+    "status": "done",
+    "notes": "Warm carpentry workshop: espresso walnut board #3B2418, plank tones oak/mahogany/driftwood/walnut, moss green PLAY, amber timer, teal glow. Fonts: Lilita One (carved display) + Nunito (HUD). Screens: title, map, game, overlays."
+  },
+  {
+    "name": "Procedural level generator + solvability verifier",
+    "status": "done",
+    "notes": "Seeded generation, Monte-Carlo overlap rejection, cover linking, greedy top-down verification sim; levels 1-20 verified solvable in-browser; deterministic replay."
+  },
+  {
+    "name": "Core gameplay: canvas board, screw spin-out, plank tumble",
+    "status": "cut",
+    "notes": "Superseded by relocation mechanic per user redirect."
+  },
+  {
+    "name": "Level map, HUD, win/lose/pause, audio, persistence",
+    "status": "done",
+    "notes": "Drag/wheel/inertia map with pegs, checks, teal glow, locked grays; plaque HUD with warn/danger timer; pause/win/lose/settings/howto modals; WebAudio SFX; localStorage progress."
+  },
+  {
+    "name": "Relocation core: lift/hold/place/cancel interactions",
+    "status": "in_progress",
+    "notes": "Click screw lifts it out (held, glowing, float above board); click valid empty hole spins it in; click empty space/own hole cancels back. Held screw follows cursor. Plank falls only at zero screws; placements re-pin planks."
+  },
+  {
+    "name": "Generator v2: holes + BFS solvability-verified relocation levels",
+    "status": "todo",
+    "notes": "Planks carry screw-holes (some filled, some empty); exact-state BFS over (holeBitset, aliveMask) finds winning move sequence; discard trivially-short solutions; difficulty ramp via plank/screw/spare-hole counts; holes snap to visible (uncovered) positions at build time."
+  },
+  {
+    "name": "Undo stack + manual restart + valid-hole highlighting",
+    "status": "todo",
+    "notes": "UNDO button reverts lift/place and restores fallen planks (reversible plank-drop events); RESTART in HUD; lifted screw highlights reachable empty holes with pulsing teal rings, dims covered/invalid spots; invalid click does nothing."
+  },
+  {
+    "name": "Renderer/UX updates for holes + held screw + re-verify full loop",
+    "status": "todo",
+    "notes": "Open hole rims on planks, screws drawn inside holes, spin-out lift / spin-in place animations + sounds, ghost-preview of held screw over holes, hole-fall capacity hints. Re-test win/lose/undo/restart/map/pause end-to-end in browser."
+  },
+  {
+    "name": "Parking slots: data model + interaction (game.js)",
+    "status": "done"
+  },
+  {
+    "name": "Parking slots: tray rendering + highlights (renderer.js)",
+    "status": "done"
+  },
+  {
+    "name": "Solver +2 parking capacity (BigInt) & difficulty retune (generator.js)",
+    "status": "done"
+  },
+  {
+    "name": "Browser verification: generation sweep + playtest parking flow",
+    "status": "done"
+  }
+]
